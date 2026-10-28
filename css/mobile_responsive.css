@@ -1,0 +1,1270 @@
+@media (max-width: 768px) {
+    .mobile-topbar{
+        display: block;
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        width: 46px;
+        height: 46px;
+        z-index: 1100;
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    .menu-btn{
+        pointer-events: auto;
+        display: flex;
+        position: absolute;
+        inset: 0;
+        width: 46px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        background: var(--card-bg);
+        color: var(--text-primary);
+        font-size: 20px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+        cursor: pointer;
+    }
+
+    .sidebar{
+        width: 280px;
+        max-width: 85%;
+        z-index: 1101;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .sidebar.open{
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay.show{
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1100;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .main-content{
+        margin-left: 0;
+        padding: 17px 16px 10px;
+        min-width: 0;
+    }
+
+    .dashboard-header{
+        height: auto;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .welcome-msg-cont{
+        width: calc(100% - 56px);
+        height: auto;
+        gap: 5px;
+        margin-left: 56px;
+        padding-top: 2px;
+    }
+
+    .welcome-msg-cont h1{
+        font-size: 1.2em;
+    }
+
+    .welcome-msg-cont p{
+        font-size: 0.8em;
+    }
+
+    .dashboard-header-right-side{
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        justify-content: space-evenly;
+        gap: 8px;
+    }
+
+    .date-selector{
+        height: 36px;
+        padding: 4px 8px;
+        gap: 4px;
+    }
+
+    .date-selector select{
+        max-width: 85px;
+        font-size: 0.75em;
+    }
+
+    .dashboard-profile,
+    .profile-btn{
+        width: auto;
+        height: auto;
+    }
+
+    .profile-btn{
+        gap: 5px;
+    }
+
+    .profile-btn span{
+        width: 34px;
+        height: 34px;
+        font-size: 1em;
+    }
+
+    .dashboard-header-right-side hr{
+        height: 25px;
+    }
+
+    .kpi-cards-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+        margin-top: 16px;
+    }
+
+    .kpi-card{
+        width: 100%;
+        height: 100px;
+        padding: 10px 14px;
+        gap: 12px;
+        border-radius: 12px;
+    }
+
+    .kpi-card>span{
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        bottom: 0;
+    }
+
+    .kpi-card>span svg{
+        width: 26px;
+        height: 26px;
+    }
+
+    .expense-data-cont{
+        width: auto;
+        min-width: 0;
+        flex-grow: 1;
+        height: 100%;
+        padding: 4px 0;
+        justify-content: space-around;
+        margin-left: 10px;
+    }
+
+    .kpi-static-text{
+        font-size: 0.8em;
+    }
+
+    .kpi-updation-text1{
+        font-size: 1.35em;
+    }
+
+    .kpi-updation-text2{
+        font-size: 0.68em;
+    }
+
+    .kpi-place-for-graph{
+        width: 65px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
+    .category-dot{
+        width: 14px;
+        height: 14px;
+    }
+
+    .spending-category-item>span:not(.category-dot){
+        font-size: 0.75em;
+    }
+
+    .spending-transactions-row{
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .spending-overview{
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .spending-overview-content{
+        height: auto;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .spending-chart-container{
+        width: 100%;
+        height: 220px;
+        flex-shrink: 0;
+    }
+
+    .spending-category-list{
+        width: 100%;
+        padding: 0;
+        gap: 14px;
+    }
+
+    .spending-category-item{
+        grid-template-columns: 12px minmax(0,1fr) 42px 80px;
+        column-gap: 8px;
+        margin-left: 0;
+    }
+
+    .recent-transactions{
+        width: 100%;
+        padding: 16px;
+        height: 30vh;
+    }
+
+    .recent-transactions-header{
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    #view-all-transactions{
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+
+    .recent-transaction-row{
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .transaction-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .transaction-details{
+        flex-grow: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .transaction-title{
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .transaction-meta{
+        font-size: 0.72em;
+    }
+
+    .transaction-title-cell{
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .budget-overview-header{
+        margin-bottom: 27px;
+    }
+
+    .transaction-title,.transaction-meta{
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .transaction-amount{
+        font-size: 0.82em;
+    }
+
+    .smart-tip-cont{
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+        padding: 20px;
+    }
+
+    .smart-tip-header{
+        margin-bottom: 16px;
+    }
+
+    .smart-tip-cont p{
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+    .smart-tip-image-cont{
+        min-height: 150px;
+        margin-top: 22px;
+    }
+
+    .smart-tip-image-cont img{
+        max-width: 180px;
+        height: 160px;
+    }
+
+    .dashboard-finance-row{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .monthly-summary,.budget-overview{
+        width: 100%;
+        height: 320px;
+        padding: 16px;
+    }
+
+    .monthly-summary-header{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #monthly-summary-chart{
+        height: 240px;
+    }
+
+    .budget-category-item{
+        grid-template-columns: 32px 95px 1fr 32px;
+        gap: 8px;
+    }
+
+    .budget-progress{
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .budget-amount{
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .budget-percentage{
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .financial-goals{
+        padding: 16px;
+        margin-bottom: 0;
+    }
+
+    .financial-goals-list{
+        gap: 12px;
+    }
+
+    .financial-goal-item{
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+
+    .goals-scroll-hint{
+        font-size: 0.65em;
+    }
+
+    .financial-goals-title{
+        width: 69%;
+    }
+
+    .financial-goals-title h4{
+        font-size: 0.9em;
+    }
+
+    .transaction-workspace{
+        margin-top: 0;
+    }
+
+    .padding-left-cont{
+        padding-left: 56px;
+        padding-top: 3px;
+    }
+
+    .transaction-heading{
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .transaction-heading h1{
+        margin: 0;
+        font-size: 1.25em;
+    }
+
+    .transaction-filter-panel{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .transaction-search-box{
+        width: auto;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .mobile-filter-btn{
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--border-color);
+        border-radius: 9px;
+        background: var(--card-bg);
+        color: var(--text-primary);
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .transaction-filter-options{
+        display: none;
+    }
+
+    .transaction-filter-overlay{
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1200;
+        background: rgba(0,0,0,0.45);
+    }
+
+    .transaction-filter-panel.filters-open .transaction-filter-overlay{
+        display: block;
+    }
+
+    .transaction-filter-panel.filters-open .transaction-filter-options{
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1201;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding: 24px 18px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -8px 30px rgba(0,0,0,0.15);
+    }
+
+    .transaction-filter-options select,.transaction-filter-options .transaction-date-filter,
+    .transaction-filter-options .transaction-date-filter input,.transaction-filter-options .transaction-clear-btn{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .transaction-filter-options .transaction-date-filter{
+        justify-content: space-between;
+    }
+
+    .transaction-record-panel{
+        height: calc(100vh - 250px);
+        min-height: 280px;
+        padding: 14px;
+    }
+
+    .transaction-record-heading{
+        top: 14px;
+        left: 14px;
+        right: 14px;
+    }
+
+    .transaction-table-scroll{
+        top: 90px;
+        left: 14px;
+        right: 14px;
+        bottom: 54px;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .transaction-record-table{
+        min-width: 620px;
+        table-layout: auto;
+    }
+
+    .transaction-record-table th,.transaction-record-table td{
+        padding: 12px 10px;
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+
+    .transaction-record-table .transaction-empty-message{
+        white-space: normal;
+        padding-top: 50px;
+    }
+
+    .transaction-record-footer{
+        left: 14px;
+        right: 14px;
+        height: 42px;
+    }
+
+    .transaction-entry-modal,.transaction-delete-modal{
+        padding: 18px;
+    }
+
+    .transaction-form-row{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .transaction-form-row .transaction-form-field{
+        width: 100%;
+    }
+
+    .transaction-form-actions button,.transaction-delete-actions button{
+        width: 50%;
+    }
+
+    .auth-page{
+        display:block;
+        min-height:100vh;
+    }
+
+    .brand-panel{
+        display:none;
+    }
+
+    .form-panel{
+        align-items:flex-start;
+        min-height:100vh;
+        padding:32px 22px;
+    }
+
+    .form-content{
+        max-width:440px;
+        margin:auto;
+    }
+
+    .mobile-logo{
+        display:flex;
+        margin-top:0;
+    }
+
+    .form-header{
+        margin-top:38px;
+    }
+
+    .form-header h2{
+        font-size:27px;
+    }
+
+    .form-tabs{
+        margin-top:26px;
+    }
+
+    .login-form,.signup-form{
+        gap:19px;
+        margin-top:26px;
+    }
+
+    .privacy-note{
+        margin-top:28px;
+    }
+
+    .budgets-header-section{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .budget-planner-heading-section{
+        display: block;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 3px 0 0 56px;
+        box-sizing: border-box;
+    }
+
+    .budget-planner-heading-section h1{
+        margin: 0;
+        font-size: 1.25em;
+        line-height: 1.35;
+        overflow-wrap: normal;
+    }
+
+    .budget-planner-heading-section p{
+        margin: 5px 0 0;
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .budget-planner-header-right-side{
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        grid-template-rows: 42px auto;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .budget-planner-header-right-side .date-selector,.budget-planner-header-right-side .add-budget{
+        height: 42px;
+    }
+
+    .budget-planner-header-right-side .date-selector{
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+        justify-content: space-around;
+    }
+
+    .budget-planner-header-right-side .add-budget{
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 0 6px;
+        white-space: nowrap;
+    }
+
+    .budget-planner-header-right-side .copy-previous-month-btn{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: static;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .kpi-cards-row{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+
+    .kpi-cards-row>.budget-kpi-card{
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 88px;
+        margin: 0;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .budget-kpi-card .budget-kpi-icon{
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 1.3em;
+    }
+
+    .budget-kpi-card .expense-data-cont{
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .budget-kpi-card .budget-kpi-title-row{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .budget-kpi-card h3{
+        margin: 0;
+        font-size: 1.25em;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .budget-kpi-static-text,.budget-kpi-description{
+        white-space: normal;
+        overflow-wrap: anywhere;
+        font-size: 0.82em;
+        line-height: 1.4;
+    }
+
+    .budget-categories-header{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+        margin-bottom: 14px;
+    }
+
+    .budget-categories-heading{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .budget-categories-actions{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .budget-categories-actions .budget-filter-btn{
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .budget-category-cont{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .budget-category-cont>.budget-category-card{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        padding: 12px;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .budget-category-card > h3{
+        font-size: 1.25em;
+    }
+
+    .budget-category-card-header{
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr) 30px 30px;
+        align-items: center;
+        gap: 7px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .budget-category-card-header h3{
+        min-width: 0;
+        margin: 0;
+        font-size: 0.92em;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .budget-category-card-header button{
+        width: 30px;
+        height: 30px;
+        min-width: 0;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .budget-category-card .budget-category-icon{
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .budget-category-spending{
+        margin-top: 8px;
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+
+    .budget-category-card > p{
+        margin-top: 12px;
+    }
+
+    .budget-category-progress{
+        margin-top: 8px;
+    }
+
+    .budget-category-progress-track{
+        height: 6px;
+    }
+
+    .financial-goals-page-header{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .financial-goals-page-heading{
+        padding: 3px 0 0 56px;
+        min-width: 0;
+    }
+
+    .financial-goals-page-heading h1{
+        font-size: 1.25em;
+        line-height: 1.35;
+    }
+
+    .financial-goals-page-heading p{
+        margin-top: 5px;
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .add-financial-goal-btn{
+        width: 100%;
+        height: 42px;
+        padding: 0 12px;
+        border-radius: 9px;
+        font-size: 0.85em;
+    }
+
+    .financial-goal-summary{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .financial-goal-summary-card{
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        height: auto;
+        min-height: 88px;
+        padding: 12px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    }
+
+    .financial-goal-summary-icon{
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 19px;
+    }
+
+    .financial-goal-summary-content{
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+    }
+
+    .financial-goal-summary-title{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .financial-goal-summary-title p{
+        font-size: 0.8em;
+        white-space: normal;
+    }
+
+    .financial-goal-summary-title h3,.financial-goal-summary-card4 .financial-goal-summary-title h3{
+        font-size: 1.25em;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .financial-goal-summary-description{
+        margin-top: 4px;
+        font-size: 0.78em;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .financial-goals-list-section{
+        margin-top: 24px;
+    }
+
+    .financial-goals-list-header{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .financial-goals-list-heading h2{
+        font-size: 1.15em;
+    }
+
+    .financial-goals-list-heading p{
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .transaction-record-panel {
+        height: calc(100vh - 200px);
+    }
+
+    .transaction-record-heading {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .transaction-total-summary {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .transaction-total-card {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .transaction-table-scroll {
+        top: 205px;
+        overflow-x: auto;
+    }
+
+    .financial-goals-list-actions{
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .financial-goals-list-actions label{
+        font-size: 0.85em;
+    }
+
+    #financial-goal-sort{
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: 42px;
+        padding: 0 12px;
+        border-radius: 9px;
+        box-sizing: border-box;
+    }
+
+    #goals-page-list{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        width: 100%;
+    }
+
+    .financial-goal-card,.goals-page-card{
+        grid-template-columns: 42px minmax(0, 1fr);
+        column-gap: 12px;
+        row-gap: 12px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .financial-goal-icon,.goals-page-icon{
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 19px;
+    }
+
+    .financial-goal-card-title h3{
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .financial-goal-card-title p,.financial-goal-card-description{
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .financial-goal-card-amounts{
+        gap: 12px;
+    }
+
+    .financial-goal-card-amounts span{
+        font-size: 0.78em;
+        line-height: 1.4;
+    }
+
+    .financial-goal-card-amounts h3{
+        font-size: 0.95em;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .financial-goal-track,.goals-page-track{
+        height: 6px;
+    }
+
+    .financial-goal-card-footer{
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .financial-goal-target-date{
+        font-size: 0.76em;
+        line-height: 1.5;
+    }
+
+    .financial-goal-status{
+        padding: 5px 9px;
+        font-size: 0.72em;
+    }
+
+    .financial-goal-card-actions{
+        gap: 8px;
+        grid-row: 1;
+    }
+
+    .financial-goal-card-actions button{
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+    }
+
+    .financial-goal-update-amount{
+        padding-top: 8px;
+    }
+
+    .financial-goal-update-btn{
+        min-height: 42px;
+        padding: 9px 12px;
+        font-size: 0.82em;
+        border-radius: 9px;
+    }
+
+    .budget-overview{
+        min-height: 410px;
+    }
+
+    .financial-goals-empty{
+        min-height: 320px;
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .financial-goal-modal-overlay{
+        padding: 12px;
+    }
+
+    .financial-goal-modal{
+        width: 100%;
+        max-width: 480px;
+        max-height: calc(100vh - 24px);
+        padding: 20px 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .financial-goal-modal-header{
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .financial-goal-form-field{
+        margin-top: 16px;
+    }
+
+    .analysis-workspace{
+        grid-template-columns:minmax(0,1fr);
+        gap:16px;
+        margin-top: 3px;
+    }
+
+    .analysis-heading h1{
+        font-size: 1.25em;
+        margin-left: 55px;
+    }
+
+    .analysis-main-cont{
+        gap:16px;
+    }
+
+    .analysis-heading p{
+        font-size: 0.8em;
+        margin-left: 55px;
+        margin-top: 2px;
+    }
+
+    .analysis-generate-cont{
+        grid-template-columns:44px minmax(0,1fr);
+        gap:13px;
+        padding:18px;
+    }
+
+    .analysis-generate-logo{
+        width:44px;
+        height:44px;
+        font-size:19px;
+    }
+
+    .analysis-generate-info h2{
+        font-size:1.05em;
+    }
+
+    .analysis-generate-info p{
+        font-size:0.85em;
+    }
+
+    .analysis-result-cont{
+        padding:17px;
+    }
+
+    .analysis-insights-cont{
+        grid-template-columns:minmax(0,1fr);
+    }
+
+    .analysis-chat-cont{
+        min-height:650px;
+    }
+
+    .analysis-chat-heading{
+        padding:14px;
+    }
+
+    .analysis-chat-messages{
+        min-height:300px;
+        padding:14px;
+    }
+
+    .analysis-chat-message-ai{
+        margin: 30% 0 10%;
+    }
+
+    .analysis-chat-suggestions{
+        grid-template-columns:minmax(0,1fr);
+        padding:12px;
+        gap:8px;
+    }
+
+    .analysis-prompt-btn{
+        min-height:40px;
+        padding:10px 12px;
+    }
+
+    .analysis-chat-form{
+        grid-template-columns:minmax(0,1fr) 44px;
+        padding:12px;
+    }
+
+    .analysis-heading{
+        grid-template-columns:minmax(0,1fr);
+        gap:16px;
+    }
+
+    .analysis-period-cont{
+        width:100%;
+    }
+
+    .analysis-month-selects{
+        grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    }
+
+    .analysis-trends-layout,.analysis-bottom-layout{
+        grid-template-columns:minmax(0,1fr);
+    }
+
+    .analysis-trends-layout>.analysis-result-cont,.analysis-bottom-layout>.analysis-result-cont{
+        min-height:0;
+    }
+
+    .analysis-insights-cont{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        min-height:0;
+    }
+
+    .analysis-category-list,.analysis-top-changes-list,.analysis-actions-cont{
+        min-height:0;
+    }
+
+    .analysis-category-list>.analysis-empty-cont,.analysis-top-changes-list>.analysis-empty-cont{
+        min-height:220px;
+    }
+
+    .analysis-insights-cont>.analysis-empty-cont,.analysis-actions-cont>.analysis-empty-cont{
+        min-height:220px;
+    }
+
+    .analysis-result-cont{
+        padding:18px;
+    }
+
+    .analysis-comparison-card{
+        padding:18px;
+    }
+
+    .analysis-comparison-cont{
+        grid-template-columns:minmax(0,1fr);
+        gap:14px;
+    }
+
+    .analysis-comparison-card{
+        grid-template-columns:50px minmax(0,1fr);
+        width:100%;
+        min-height:125px;
+        padding:20px;
+    }
+
+    .analysis-comparison-icon{
+        width:48px;
+        height:48px;
+    }
+
+    .analysis-comparison-info h2{
+        font-size:1.8em;
+    }
+
+}
+
+@media (min-width: 769px){
+    .mobile-topbar,.mobile-filter-btn{
+        display: none;
+    }
+}
+
+/* .theme-toggle{
+    visibility: hidden;
+} */

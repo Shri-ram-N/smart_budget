@@ -1,0 +1,669 @@
+.budgets-header-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.budgets-header-section h1{
+    color: var(--text-primary);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.budgets-header-section p{
+    margin-top: 6px;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+.budget-planner-header-right-side{
+    display: flex;
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(12px, 2vw, 30px);
+}
+
+.date-selector{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    height: 45px;
+}
+
+.date-selector>i{
+    font-size: 15px;
+}
+
+.date-selector select{
+    border: none;
+    outline: none;
+    padding: 2px;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.copy-previous-month-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 45px;
+    padding: 11px 14px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.copy-previous-month-btn:hover{
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: var(--card-shadow);
+}
+
+.copy-previous-month-btn:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.copy-previous-month-btn i{
+    color: var(--primary-color);
+}
+
+.add-budget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    background: var(--primary-color);
+    color: var(--text-on-primary);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    height: 45px;
+}
+
+.add-budget:hover{
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.kpi-cards-row{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.budget-kpi-card{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    height: 140px;
+    padding: 16px 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.budget-kpi-card:hover{
+    transform:translateY(-2px);
+}
+
+.budget-kpi-card1{
+    background: linear-gradient(315deg, var(--income-bg), var(--card-bg));
+    border-color: var(--primary-light);
+}
+
+.budget-kpi-card2{
+    background: linear-gradient(315deg, var(--info-bg), var(--card-bg));
+    border-color: var(--info-bg);
+}
+
+.budget-kpi-card3{
+    background: linear-gradient(315deg, var(--warning-bg), var(--card-bg));
+    border-color: var(--warning-bg);
+}
+
+.budget-kpi-card4{
+    background: linear-gradient(315deg, var(--expense-bg), var(--card-bg));
+    border-color: var(--expense-bg);
+}
+
+.budget-kpi-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    min-width: 66px;
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.budget-kpi-card1 .budget-kpi-icon{
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.budget-kpi-card2 .budget-kpi-icon{
+    background: var(--info-bg);
+    color: var(--info-color);
+}
+
+.budget-kpi-card3 .budget-kpi-icon{
+    background: var(--warning-bg);
+    color: var(--warning-color);
+}
+
+.budget-kpi-card4 .budget-kpi-icon{
+    background: var(--expense-bg);
+    color: var(--expense-color);
+}
+
+.expense-data-cont{
+    min-width: 0;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.budget-kpi-title-row{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.budget-kpi-static-text{
+    color: var(--text-secondary);
+    font-size: 0.85em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.budget-kpi-card h3{
+    margin: 0;
+    color: var(--text-primary);
+    font-size: clamp(1.1em, 2vw, 1.8em);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.budget-kpi-card4 h3{
+    color: var(--expense-color);
+    font-size: 1.8em;
+}
+
+.budget-kpi-description{
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.budget-form-field select{
+    cursor: pointer;
+}
+
+.budget-kpi-progress{
+    display: block;
+    width: 100%;
+    height: 8px;
+    min-height: 8px;
+    margin-top: 16px;
+    overflow: hidden;
+    background: var(--border-color);
+    border-radius: 10px;
+}
+
+.budget-kpi-progress>div{
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.budget-kpi-card3 .budget-kpi-progress>div{
+    background: var(--warning-color);
+}
+
+.budget-categories-section{
+    margin-top: 28px;
+}
+
+.budget-categories-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.budget-categories-heading h2{
+    color: var(--text-primary);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.budget-categories-heading p{
+    margin-top: 6px;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+.budget-categories-actions{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.budget-filter-btn{
+    padding: 10px 15px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.budget-filter-btn:hover{
+    background: var(--primary-light);
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+}
+
+.budget-filter-btn:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.budget-filter-btn.active{
+    background: var(--primary-color);
+    color: var(--text-on-primary);
+    border-color: var(--primary-color);
+    box-shadow: var(--card-shadow);
+}
+
+.budget-category-cont{
+    display: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.budget-categories-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 520px;
+    padding: 32px 20px;
+    background: var(--card-bg);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.budget-empty-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.budget-categories-empty h3{
+    color: var(--text-primary);
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.budget-categories-empty p{
+    max-width: 380px;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+    line-height: 1.6;
+}
+
+.budget-categories-empty .add-budget{
+    margin-top: 6px;
+}
+
+.budget-modal-overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.55);
+    overflow-y: auto;
+}
+
+.budget-modal-overlay.show{
+    display: flex;
+}
+
+.budget-entry-modal{
+    width: 100%;
+    max-width: 500px;
+    max-height: calc(100vh - 40px);
+    padding: 24px;
+    overflow-y: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+}
+
+.budget-modal-heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.budget-modal-heading h2{
+    color: var(--text-primary);
+    font-size: 1.35em;
+    font-weight: 600;
+}
+
+.budget-modal-heading p{
+    margin-top: 7px;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+    line-height: 1.5;
+}
+
+.budget-modal-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    background: var(--hover-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.budget-modal-close:hover{
+    background: var(--expense-bg);
+    color: var(--expense-color);
+}
+
+.budget-form-field{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    margin-top: 20px;
+}
+
+.budget-form-field label{
+    color: var(--text-primary);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.budget-form-field input,.budget-form-field select{
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.budget-form-field input:focus,.budget-form-field select:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.budget-form-field input::placeholder{
+    color: var(--text-muted);
+}
+
+.budget-form-hint{
+    margin-top: 2px;
+    color: var(--text-secondary);
+    font-size: 0.78em;
+    line-height: 1.5;
+}
+
+.budget-form-row{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 0;
+}
+
+.budget-form-actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider-color);
+}
+
+.budget-cancel-btn,.budget-save-btn{
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.budget-cancel-btn{
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.budget-cancel-btn:hover{
+    background: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+.budget-save-btn{
+    background: var(--primary-color);
+    color: var(--text-on-primary);
+    border: 1px solid var(--primary-color);
+}
+
+.budget-save-btn:hover{
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.budget-cancel-btn:active,.budget-save-btn:active{
+    transform: scale(0.98);
+}
+
+.budget-category-card{
+    min-width: 0;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.budget-category-card:hover{
+    border-color:var(--primary-color);
+    transform:translateY(-1px);
+    box-shadow: 0 6px 22px rgba(24, 50, 35, 0.08);
+}
+
+.budget-category-card-header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.budget-category-card-header>span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.budget-category-card-header h3{
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.budget-edit-btn,.budget-delete-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29px;
+    height: 29px;
+    padding: 0;
+    background: var(--hover-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    font-size: 0.7em;
+}
+
+.budget-edit-btn:hover{
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.budget-delete-btn:hover{
+    background: var(--expense-bg);
+    color: var(--expense-color);
+}
+
+.budget-category-card>p{
+    margin-top: 22px;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+.budget-category-card>h3{
+    margin-top: 5px;
+    color: var(--text-primary);
+    font-size: 1.65em;
+    font-weight: 700;
+}
+
+.budget-category-spending{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.budget-category-spending span{
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+.budget-category-progress{
+    margin-top: 22px;
+}
+
+.budget-category-progress>span{
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.8em;
+}
+
+.budget-category-progress-track{
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+    background: var(--border-color);
+    border-radius: 10px;
+}
+
+.budget-category-progress-track>div{
+    height: 100%;
+    /* background: ; */
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+#budget-custom-category-field[hidden]{
+    display: none !important;
+}
+
+#budget-custom-category-field:not([hidden]){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#budget-custom-category-name{
+    width: 100%;
+    box-sizing: border-box;
+}

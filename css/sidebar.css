@@ -1,0 +1,217 @@
+.container{
+    min-height: 100vh;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sidebar-bg);
+    border-right: 2px solid var(--divider-color);
+    padding: 0 20px;
+}
+
+.logo-cont{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0 16px 0;
+}
+
+.logo-cont img{
+    height: 70px;
+}
+
+.brand-name{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.option-flex-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 36%;
+    color: var(--text-secondary);
+    margin-top: 2%;
+}
+
+.brand-name-heading{
+    color: var(--text-primary);
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.brand-name-heading span{
+    color: var(--primary-color);
+}
+
+.brand-name-context{
+    color: var(--text-secondary);
+    font-size: 0.8em;
+}
+
+#logout-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 11px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--expense-color);
+    font-size: 0.9em;
+    padding-left: 10%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#logout-btn i{
+    width: 18px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#logout-btn:hover{
+    background-color: var(--expense-bg);
+}
+
+.side-bar-btns{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.side-bar-btn-active{
+    background: linear-gradient(to right,var(--primary-color) 6px,var(--primary-light) 6px);
+    color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.side-bar-btns:hover{
+    background: var(--hover-bg);
+    color: var(--primary-color);
+}
+
+.side-bar-btn-active:hover{
+    background: linear-gradient(to right,var(--primary-color) 6px,var(--hover-bg) 6px);
+}
+
+.sidebar-tips{
+    display: flex;
+    background: var(--primary-light);
+    width: 100%;
+    margin-top: 80px;
+    padding: 24px 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.sidebar-tips img{
+    height: 39px;
+    margin: 0 10px;
+}
+
+.sidebar-tips p{
+    color: var(--text-secondary);
+    font-size: 0.8em;
+    line-height: 19px;
+}
+
+.theme-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    margin: 61% 12px 12px;
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.theme-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9em;
+}
+
+#theme-icon{
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.theme-switch{
+    width: 46px;
+    height: 26px;
+    padding: 3px;
+    border: none;
+    border-radius: 20px;
+    background-color: #C9D0CB;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.switch-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease;
+}
+
+.theme-switch.active{
+    background-color: var(--primary-color);
+}
+
+.theme-switch.active .switch-circle{
+    transform: translateX(20px);
+}
+
+.menu-btn{
+    display: none;
+}
+
+.sidebar-overlay{
+    display: none;
+}
+
+.main-content{
+    margin-left: 300px;
+    padding: 12px 30px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.main-content>section{
+    display: none;
+}
+
+.main-content>section.section-active{
+    display: block;
+}
