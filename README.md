@@ -1,25 +1,29 @@
 # Smart Budget 💰
 
-**Smart Budget** is a personal finance management web application designed to help users track income, manage expenses, plan budgets, and monitor their financial goals in one place.
+A personal finance management web application built to help users track income, manage expenses, plan monthly budgets, analyze financial habits, and monitor savings goals.
+
+## 🌐 Live Demo
+
+**Try Smart Budget here:** [https://shri-ram-n.github.io/smart_budget/](https://shri-ram-n.github.io/smart_budget/)
 
 ## ✨ Features
 
 - **Dashboard** — View total income, expenses, savings, available balance, and recent transactions.
-- **Transaction Management** — Add, edit, delete, search, filter, and sort financial transactions.
-- **Budget Planner** — Set monthly budgets by category and track spending against budget limits.
-- **Spending Overview** — Visualize spending patterns and category-wise expenses using charts.
-- **Financial Analysis** — Compare financial performance across different months.
-- **Financial Goals** — Create financial goals and track savings progress.
-- **Smart Tips** — Get helpful insights to improve spending and saving habits.
+- **Transaction Management** — Add, edit, delete, search, filter, and sort transactions.
+- **Budget Planner** — Create monthly budgets by category and monitor spending limits.
+- **Spending Overview** — Visualize category-wise expenses with charts.
+- **Financial Analysis** — Compare financial activity across different months.
+- **Financial Goals** — Set savings goals and monitor progress.
+- **Smart Tips** — Display helpful insights for better spending and saving habits.
 - **Dark Mode** — Switch between light and dark themes.
-- **User Authentication** — Register and log in to access your personal finance dashboard.
+- **User Authentication** — Register and log in to access the application.
 - **Data Export** — Export transaction data in JSON or CSV format.
 
 ## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
-- Vanilla JavaScript (ES Modules)
+- JavaScript (Vanilla JS and ES Modules)
 - Chart.js
 - Browser LocalStorage
 
@@ -30,6 +34,8 @@ smart_budget/
 ├── auth.html
 ├── index.html
 ├── style.css
+├── README.md
+├── .gitignore
 ├── css/
 │   ├── auth.css
 │   ├── basic.css
@@ -41,21 +47,25 @@ smart_budget/
 │   ├── sidebar.css
 │   └── transactions.css
 ├── images/
-├── js/
-│   ├── auth.js
-│   ├── authPage.js
-│   ├── budgetPlanner.js
-│   ├── categoryConfig.js
-│   ├── charts.js
-│   ├── dashboard.js
-│   ├── financialAnalysis.js
-│   ├── financialGoals.js
-│   ├── main.js
-│   ├── sidebar.js
-│   ├── theme.js
-│   ├── transactions.js
-│   └── utils.js
-└── README.md
+│   ├── dark-logo-img.png
+│   ├── favicon.png
+│   ├── logo-img.png
+│   ├── sidebar-tip-logo.png
+│   └── smart-tip-plant.png
+└── js/
+    ├── auth.js
+    ├── authPage.js
+    ├── budgetPlanner.js
+    ├── categoryConfig.js
+    ├── charts.js
+    ├── dashboard.js
+    ├── financialAnalysis.js
+    ├── financialGoals.js
+    ├── main.js
+    ├── sidebar.js
+    ├── theme.js
+    ├── transactions.js
+    └── utils.js
 ```
 
 ## 🚀 Getting Started
@@ -63,9 +73,10 @@ smart_budget/
 ### Prerequisites
 
 - A modern web browser
+- Visual Studio Code or another code editor
 - A local development server, such as the VS Code Live Server extension
 
-### Run Locally
+### Installation
 
 1. Clone the repository:
 
@@ -73,38 +84,52 @@ smart_budget/
    git clone git@github.com:Shri-ram-N/smart_budget.git
    ```
 
-2. Open the project folder:
+2. Navigate to the project directory:
 
    ```bash
    cd smart_budget
    ```
 
-3. Start the project using VS Code Live Server or another local HTTP server.
+3. Open the project folder in your code editor.
 
-4. Open the served page in your browser and start exploring Smart Budget.
+4. Start a local development server using Live Server or another static HTTP server.
+
+5. Open the locally served website in your browser.
 
 ## 💾 Data Storage
 
-Smart Budget uses browser LocalStorage to store user-related information and transaction data locally in the browser.
+Smart Budget uses browser LocalStorage to store user-related information and financial transaction data.
 
-Data stored in LocalStorage is browser-specific and is not automatically synchronized across devices.
+Since the application uses browser-based storage, data is specific to the browser and device. It is not automatically synchronized across devices, and clearing browser storage may result in data loss.
 
-## 🔒 Security Note
+## 🔐 Security and Learning Purpose
 
-This project is intended for learning and personal finance management. Browser-based authentication and LocalStorage are not a substitute for secure server-side authentication and database storage.
+This project was developed for **educational purposes** to explore frontend development, browser-based data storage, user authentication concepts, and basic cryptographic techniques.
 
-Avoid storing real passwords, sensitive financial information, or other confidential data in an insecure environment.
+SHA-256 was explored as part of the learning process to understand cryptographic hashing.
+
+**Important security distinction:** SHA-256 is a one-way cryptographic hash function, not encryption. It does not provide a way to decrypt the original input. Plain SHA-256 alone is not suitable for securely storing passwords in a production application. Production systems should use a password-hashing algorithm designed for password storage, such as Argon2id, scrypt, or appropriately configured bcrypt, with salts and other recommended protections.
+
+This application is a learning project and should not be used to store sensitive financial information or real passwords without appropriate security controls.
 
 ## 📌 Future Improvements
 
 - Backend integration and database storage
 - Secure server-side authentication
+- Dedicated password storage using a suitable password-hashing algorithm
 - Financial reports and advanced analytics
-- Improved data synchronization and backup
+- Data backup and synchronization across devices
+- Additional financial planning tools
 
 ## 👨‍💻 Author
 
 **Shri-ram-N**
+
+GitHub: [@Shri-ram-N](https://github.com/Shri-ram-N)
+
+## 📄 License
+
+This project is intended for educational and personal learning purposes.
 
 ---
 
